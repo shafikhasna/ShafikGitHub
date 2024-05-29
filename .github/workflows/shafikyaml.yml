@@ -26,7 +26,7 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t rabab:latest .
-          docker rabab:latest 381492174623.dkr.ecr.us-east-2.amazonaws.com/rabab:latest
+          docker tag rabab:latest 381492174623.dkr.ecr.us-east-2.amazonaws.com/rabab:latest
           docker push 381492174623.dkr.ecr.us-east-2.amazonaws.com/rabab:latest
 
       - name: Update ECS service
